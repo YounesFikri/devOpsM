@@ -5,7 +5,7 @@ load_dotenv()
 
 nb = os.getenv("NUMBER")
 
-if(int(nb)%2==0):
+if((int(nb)/2)%2==0):
     print("nice")
     exit(0)
 else:
