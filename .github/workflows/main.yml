@@ -19,9 +19,10 @@ jobs:
         with: 
           python-version: '3.13'
 
+      - name: Installing python dependencies
+        run:  pip install dotenv
+
       - name: Run
-        run: |
-          pip install dotenv
-          python hello.py
+        run: python hello.py
     
   
