@@ -16,5 +16,34 @@ jobs:
 
         - name: Run
           run: git branch
-      
-  
+
+    Division-test:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+        
+        - name: Setup Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.18'
+        - name: installing python dependencies
+          run: pip install dotenv
+
+        - name: Run
+          run: python division.py
+
+    Branch-Switch:
+      needs: Division-test
+      runs-on: ubuntu-latest
+
+      -steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: switch
+          run: |
+            git checkout Prod
+            git push
+
