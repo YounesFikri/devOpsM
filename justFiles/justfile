@@ -18,4 +18,4 @@ commit:
 	git commit -m "$message"
 
 log:
-	git log --one-line --graph
+	@git log --graph --oneline 
