@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: name
-        run: git branch
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Run
+        run: git branch
+    
+  
