@@ -37,12 +37,13 @@ jobs:
     Branch-Switch:
       needs: Division-test
       runs-on: ubuntu-latest
-      with:
-        fetch-depth: 0        
+     
 
       steps:
         - name: Checkout code
           uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
 
         - name: switch
           run: |
