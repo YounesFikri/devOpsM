@@ -2,27 +2,16 @@ name: Pipeline
 
 on:
   push:
-    branche: feature/pipeline
+    branches: [Dev,Val,Prod]
   pull_request:
+    branches: [Dev,Val,Prod]
     branch: feature/pipeline
 
 jobs:
-  hello-world:
+    Branche-name:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: name
+        run: git branch
 
-      - name: Setup a venv
-        uses: actions/setup-python@v7
-        with: 
-          python-version: '3.13'
-
-      - name: Installing python dependencies
-        run:  pip install dotenv
-
-      - name: Run
-        run: python hello.py
-    
-  
