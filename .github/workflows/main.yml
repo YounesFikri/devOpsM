@@ -3,7 +3,7 @@ name: Pipeline
 on:
   push:
     branche: feature/pipeline
-  pull:
+  pull_request:
     branch: feature/pipeline
 
 jobs:
