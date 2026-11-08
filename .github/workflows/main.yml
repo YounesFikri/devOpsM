@@ -20,6 +20,8 @@ jobs:
           python-version: '3.13'
 
       - name: Run
-        run: python hello.py
+        run: |
+          pip install dotenv
+          python hello.py
     
   
