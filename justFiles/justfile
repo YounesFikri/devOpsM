@@ -19,3 +19,21 @@ commit:
 
 log:
 	@git log --graph --oneline 
+
+supprimer:
+	rm -f ../tmp.txt
+
+
+
+
+create-db:
+	@sudo -u postgres createuser --if-not-exists -s $USER; \
+	createdb ma_base; \
+
+db-query *args:
+    psql -d ma_base -c "{{args}}"
+
+
+db-reset: 
+	dropdb --if-exists -f ma_base
+   
