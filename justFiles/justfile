@@ -14,7 +14,7 @@ add:
 	git add .
 
 commit:
-	read -p "Enter a message: " message; \
+	@read -p "Enter a message: " message; \
 	git commit -m "$message"
 
 log:
